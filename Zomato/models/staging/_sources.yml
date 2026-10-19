@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: raw
+    database: ZOMATO
+    schema: RAW
+    tables:
+      - name: restaurants
+        description: "Table contain info of restaurants and their details"
+
+      - name: reviews 
+        description: "Table contain info of reviews and their details"
+
+      - name: users
+        description: "Table contain info of users and their details"
+
+      - name: food
+        description: "Table contain info of food and their details"
+
+      - name: menu
+        description: "Table contain info of menu and their details"
+
+      - name: orders 
+        description: "Table contain info of orders and their details"
+
+      - name: order_items
+        description: "Table contain info of order items and their details"
+
+      - name: order_item
+        description: "Table contain info of order items and their details"
+
+  - name: ai
+    database: ZOMATO
+    schema: AI
+    tables:
+      - name: enriched_reviews
+        description: "AI-enriched reviews containing sentiments, aspects, and tags"

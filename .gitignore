@@ -1,0 +1,90 @@
+# ==============================================================================
+# Git Ignore Configuration - Zomato AI Data Analytics Platform
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Credentials, API Keys, and Environment Files (NEVER COMMIT)
+# ------------------------------------------------------------------------------
+.env
+*.env
+.env.*
+!.env.example
+!*.env.example
+Cred/
+credentials/
+*.pem
+*.key
+*.token
+
+# ------------------------------------------------------------------------------
+# 2. Raw Big Data & Local Datasets (> 2 GB)
+# ------------------------------------------------------------------------------
+data-*/
+data/
+*.csv
+*.tsv
+*.zip
+*.tar.gz
+*.parquet
+
+# ------------------------------------------------------------------------------
+# 3. Python Virtual Environments & Bytecode
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------------------------
+# 4. dbt (Data Build Tool) Artifacts
+# ------------------------------------------------------------------------------
+target/
+dbt_packages/
+dbt_modules/
+.user.yml
+*.user.yml
+logs/
+*.log
+
+# ------------------------------------------------------------------------------
+# 5. Airflow Runtime & Logs
+# ------------------------------------------------------------------------------
+airflow/logs/
+airflow/airflow.cfg
+airflow/airflow.db
+airflow/webserver_config.py
+pgdata/
+
+# ------------------------------------------------------------------------------
+# 6. IDE, OS, & Testing Artifacts
+# ------------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.pytest_cache/
+.coverage
+htmlcov/
